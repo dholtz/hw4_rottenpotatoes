@@ -1,0 +1,19 @@
+
+%h1 Similar Movies for #{@movie.title}
+
+%table#movies
+  %thead
+    %tr
+      %th{:class => @title_header} Title
+      %th Rating
+      %th{:class => @date_header} Release Date
+      %th Director
+  %tbody
+    - @movies.each do |movie|
+      %tr
+        %td= movie.title
+        %td= movie.rating
+        %td= movie.release_date
+        %td= movie.director
+
+= link_to 'Back to Movie List', movies_path

@@ -8,9 +8,8 @@ Given /the following movies exist/ do |movies_table|
   end
 end
 
-  Then /^the director of "(.*)" should be "(.*)"$/ do |mov, dir|
-    saved_mov = Movie.find_by_title(mov)
-    puts saved_mov.director
-    assert dir.eql? saved_mov.director
-  end
+Then /^the director of "(.*)" should be "(.*)"$/ do |mov, dir|
+  saved_mov = Movie.find_by_title(mov)
+  assert dir.eql? saved_mov.director
+end
 
