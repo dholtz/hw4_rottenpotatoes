@@ -12,4 +12,3 @@ Then /^the director of "(.*)" should be "(.*)"$/ do |mov, dir|
   saved_mov = Movie.find_by_title(mov)
   assert dir.eql? saved_mov.director
 end
-

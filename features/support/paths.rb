@@ -19,8 +19,10 @@ module NavigationHelpers
       edit_movie_path(Movie.find_by_title($1))
     when /^the details page for "(.+)"$/
       movie_path(Movie.find_by_title($1))
-    when /^the Similar Movies page for "(.+)"$/
-      find_similar_movie_path(Movie.find_by_director($1))
+    when /^Similar Movies page for "(.+)"$/
+      find_similar_path (Movie.find_by_title($1).id)
+
+
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
